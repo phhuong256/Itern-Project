@@ -1,34 +1,19 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { DatePicker, Input } from "antd";
 import { Button, Table } from "reactstrap";
-import "./style.css";
 
-export default class Home extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      data: [],
-    };
-  }
-  componentDidMount() {
-    fetch("https://jsonplaceholder.ir/users", {
-      method: "GET",
-    })
-      .then((response) => response.json())
-      .then((json) => this.setState({ data: json }));
-  }
+export default class Page2 extends React.Component {
   render() {
     const onChange = (date, dateString) => {
       console.log(dateString);
     };
-
     return (
       <>
         <div className="">
           <h1 className="text-bold text-center">予定伝票一覧</h1>
         </div>
         <form className="form-content">
-          <div className="row form-input1">
+          <div className="row">
             <div className="col-1"></div>
             <div className="col-1">
               <label for="exampleEmail">年度</label>
@@ -37,7 +22,7 @@ export default class Home extends React.Component {
               <DatePicker onChange={onChange} picker="year" />
             </div>
           </div>
-          <div className="row form-input">
+          <div className="row">
             <div className="col-1"></div>
             <div className="col-1">
               <label for="exampleEmail">伝票番号</label>
@@ -50,7 +35,7 @@ export default class Home extends React.Component {
               <Input />
             </div>
           </div>
-          <div className="row form-input">
+          <div className="row">
             <div className="col-1"></div>
             <div className="col-1">
               <label for="exampleEmail">伝票日付</label>
@@ -63,7 +48,7 @@ export default class Home extends React.Component {
               <Input />
             </div>
           </div>
-          <div className="row form-input">
+          <div className="row">
             <div className="col-1"></div>
             <div className="col-1">
               <label for="exampleEmail">申請日</label>
@@ -76,7 +61,7 @@ export default class Home extends React.Component {
               <DatePicker onChange={onChange} />
             </div>
           </div>
-          <div className="row form-input2">
+          <div className="row">
             <div className="col-1"></div>
             <div className="col-1">
               <label for="exampleEmail">出納方法</label>
@@ -90,7 +75,7 @@ export default class Home extends React.Component {
             </div>
             <div className="col-3"></div>
             <div className="col-2">
-              <Button color="secondary">登録</Button>
+              <Button color="secondary">明細追加</Button>
             </div>
           </div>
         </form>

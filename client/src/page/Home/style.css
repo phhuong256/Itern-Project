@@ -19,3 +19,22 @@
 .table-content{
     padding-top: 20px;
 }
+
+.form-conten {
+    text-align: center;
+    align-items: center;
+}
+
+.form-input {
+    align-items: center;
+    padding-bottom: 10px;
+}
+.form-input1 {
+    padding-top: 60px;
+    align-items: center;
+    padding-bottom: 30px;
+}
+.form-input2 {
+    align-items: center;
+    padding-bottom: 50px;
+}
