@@ -38,3 +38,11 @@
     align-items: center;
     padding-bottom: 50px;
 }
+
+.ant-form-item-label{
+    margin-right: 40px;
+}
+
+.ant-form-item:first-child{
+    padding-bottom: 20px;
+}
